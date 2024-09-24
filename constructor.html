@@ -1,0 +1,162 @@
+<!--
+Constructor function
+*********************
+
+- constructor function used to create the classes like structures before ES6
+- in constructor functions(variables and functions) should start with this keyword
+- This keyword reoresenting the current class member
+- we will create the object with help of "new" keyword
+
+-->
+
+<script>
+    function classone(){
+          this.subone="angular" ;
+           this.subtwo="react";
+           this.subthree="nodejs";
+            };
+
+    let obj1 = new classonw();
+    console.log(obj1.subone,obj1.subtwo);
+</script>
+
+
+
+<script>
+    function classtwo(){
+        this.wish="js";
+        this.myfun = function(){
+            return `welcome to ${this.wish}`;
+        };
+    };
+
+    let obj2 = new classtwo();
+    console.log(obj2.wish  ,obj2.myfun()); //js welcome to js
+</script>
+
+
+
+<script>
+    function classtwo(){
+        this.varone="hello";
+        this.vartwo="hello2";
+
+        this.fun1= function(){
+        return this.varone;
+        }
+
+        this.fun2= function(){
+            return this.vartwo;
+        }
+    };
+    let obj3= new classtwo();
+    console.log(obj3.fun1(), obj3.fun2());
+</script>
+
+
+ <script>
+    function class1(arg1,arg2,arg3){
+        this.var1=arg1;
+        this.var2=arg2;
+        this.var3=arg3;
+    };
+
+    let obj5 = new class1("hyy1","hyy2","hyy3");
+    console.log(obj5.var1  ,obj5.var2  ,obj5.var3);//hyy1 hyy2 hyy3
+ </script>
+
+
+
+
+
+
+<script>
+    function classno(){
+
+    };
+
+    classno.prototype.varon = "hellllo"; //this will add class member varon with value to classno
+
+    let obj6 = new classno();
+    console.log(obj6.varon);//hellllo
+
+</script>
+
+
+
+<script>
+    function classmy(){
+
+    };
+
+    classmy.prototype.varmy = "hell"; //this will add class member varon with value to classno
+    classmy.prototype.funct = function(){
+        return this.varmy;
+    }
+    let obj7 = new classmy();
+    console.log(obj7.varmy, obj7.funct());//hell hell
+
+</script>
+
+
+
+
+<script>
+// INHERITANCE   OR PROTOTYPE CHAINNING (links one class to other)
+
+function classme(){
+
+};
+classme.prototype.varme = "heaven";
+
+
+ function classchild(){
+
+ };
+
+classchild.prototype = Object.create(classme.prototype);
+classchild.prototype.varu = `hell with problem`;
+
+let obj8 = new classchild();
+console.log(obj8.varme, obj8.varu);//hyy1 hyy2 hyy3
+</script>
+
+
+
+
+<script>
+    function classn(){}
+    classn.prototype.funto= function(){
+        return "hello";
+    }
+
+    function classm(){}
+    classm.prototype=Object.create(classn.prototype);
+    classm.prototype.funtoo=function(){
+        return "hello11";
+    }
+
+    function classo(){}
+    classo.prototype=Object.create(classm.prototype);
+    classo.prototype.funthrr= function(){
+              return "helo33";
+    }
+
+    let objn=new classn();
+    console.log(objn.funto());//hello
+     
+    let objm = new classm();
+    console.log(objm.funto(),objm.funtoo());//hello hello11
+
+    let objo = new classo();
+    console.log(objo.funthrr(),objo.funto(),objo.funthrr());//helo33 hello helo33
+  
+</script>
+
+
+
+
+
+
+
+

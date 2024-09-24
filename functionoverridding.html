@@ -1,0 +1,17 @@
+<script>
+    function classone(){};
+    classone.prototype.dbfun =function(){
+        return "data from db";
+    }
+
+    function classtwo(){};
+    classtwo.prototype= Object.create(classone.prototype);
+    classtwo.prototype.dbfun = function(){
+        return " data from oracle";
+    }
+
+
+    let obj1 = new classtwo();
+    console.log(obj1.dbfun()); //data from oracle
+    
+</script>

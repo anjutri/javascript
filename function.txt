@@ -1,0 +1,31 @@
+//business logic called as function
+//function are used to reuse  the business logic
+//we will define the function with "function keywoed"
+
+//we have follwing types of function:::
+//1)Named function
+//2)Anonymous function/arrow function/callback function/fat arrow functions/nameless
+//3)Rest parameters in functions
+//4)Default parameters in functions
+//5)Optional Parameters in functions
+//6)Generators
+//7)IIFE(Immediate Invokable Functional Expression)
+//8)Constructor Functions
+
+//1)NAMED FUNCTION: functions with name
+/*
+syntax:
+i))function defination
+ii)function calling
+*******************************
+i)FUNCTION DEFINATION::
+function functionname(arg1,arg2,arg3,..........argn)
+{
+business logic
+}
+
+ii)FUNCTION CALLING::
+funvtionname(para1,para2,para3......para n);
+
+*/
+

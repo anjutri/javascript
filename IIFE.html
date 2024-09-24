@@ -1,0 +1,61 @@
+<!-- 
+ 
+IIFE -- IMMEDIATE INVOKABLE FUNCTION EXPRESSION
+------------------------------------------------
+
+-introduced in ES9
+-no need to write function call in this
+-merged function call and defination
+-these function called as self invokable function
+
+
+SYNTAX::              (arrow function)()
+--------
+
+
+((arg1,arg2,arg3....)=>{
+bussiness logic 
+})(para1,para2,para3);
+
+-->
+<script>
+    (()=>{
+        console.log("welcome");
+    })();
+</script>
+
+
+<script>
+    let msg =(()=>{
+        return "welcome dear";
+    })();
+
+    console.log(msg);
+</script>
+
+
+
+<script>
+    function funon(arg1,arg2,arg3){
+        console.log(arg1,arg2,arg3);    //output= hyy0 hyy1 hyy2
+    };
+    //funon(  (()=>{})() ,  (()=>{})(),  (()=>{})()  );
+    funon(  (()=>{ return "hyy0";})(),
+            (()=>{ return "hyy1";})(), 
+            (()=>{ return "hyy2";})()  );
+</script>
+
+
+
+<script>
+    for(var i=0;i<5;i++){
+        ((i)=>{
+        setTimeout(
+            ()=>{
+                console.log(i);
+            }   ,5000)
+        })(i);            //after 5 sec delay prints 0 1 2 3 4 
+        
+    }
+
+</script>

@@ -1,0 +1,118 @@
+<!--
+ Arrow Functions:::
+ -----------------
+ - the function without name called as anonymous function
+ - Anonymous function called as Arrow function
+ - we will represents Arrow function eith "=>"
+ - Arrow function introduced in ES6
+ 
+ SYNTAX
+ --------
+ 1) function defination
+ 2) function calling
+ 
+
+ var/let/const variablename = (arg1,arg2,arg3,...argn)=>
+ {
+    bussiness logic
+ }
+ 
+ variablename(para1,para2,para3,.....para n);
+-->
+
+<!--
+<script>
+    let funon = ()=>{
+        return "hy";
+    }
+
+    console.log(funon);   //defination
+    console.log(funon());  //hy
+</script>
+-->
+
+
+
+<!--
+<script>
+    let funon =()=> console.log("hy"); // curly bracea not compulsory
+
+    funon();
+</script>
+-->
+
+<!--
+<script>
+    let funon =(arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3);
+    };
+    funon("hy1","hy2","hy3"); //hy1 hy2 hy3
+    funon(); //undefined undefined undefined
+    funon(null,null,undefined); //null null undefined
+
+</script>
+-->
+
+
+
+
+<script>
+    let funon = (arg1,arg2,arg3) =>{
+        console.log(arg1(),arg2(),arg3());
+    }
+
+    // arguments having arrow function
+   // funon( ()=>{}, ()=>{}, ()=>{});
+
+   funon( ()=>{
+    console.log("hy arrow");
+   }, ()=>{
+    console.log("hy1 arrow");
+   }, ()=>{
+    console.log("hy2 arrow");
+   });  
+
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+    let initialize = (user,getelement,getbyid)=>{
+        console.log(user,getelement(),getbyid());
+
+    };
+
+    let getelement=()=>{
+        return "itsme";
+    };
+
+    let getbyid=()=>{
+        return "itsuuu";
+    }
+
+    initialize("hello",getelement,getbyid);//be are passing function defination as value to last 2 arguments
+
+
+</script>
+
+<script>
+
+    let arr=[];
+    for (let i=0;i<5;i++){
+
+        arr.push (()=>{ return "hyyy"}); //push arrow function
+    }                                    //arr[0] = arrow defination
+                                         //arr[0]()=hyyy
+                                         //arr[1]()=hyyy so on.....  
+    for(j=0;j<arr.length;j++)
+    {
+        console.log(arr[j]());//without() returns arrow defination
+                              //with () == hyyy 5 times
+    }
+</script>

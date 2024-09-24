@@ -1,0 +1,99 @@
+<!-- <script>
+    function fun1() //function definTION
+    {
+        return "wlcm";
+    }
+
+//FUnction calling
+      console.log(fun1());//if only written fun1 then function declaration is only returned
+      //open with live server -> inspect-> console
+</script> 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+<script>
+    function fun2(arg1,arg2){
+        console.log(arg1,arg2)
+    }
+    fun2("angular","react");
+    fun2("nodejs","mangodb");
+    fun2();//undefined undefined undefined
+    fun2(undefined,null,"hello");
+    fun2(undefined,"hy");
+</script>
+
+-----------------------------------------------------------------------------------------------------
+<script>
+ function fun3()
+ {
+    return fun3;//returns fun3 defination
+ } 
+</script>
+------------------------------------------------------------------------
+-->
+<!--
+
+<script>
+    function fun3()
+    { 
+    return fun5; //will get fun5 defination
+    }
+    function fun5()
+    {
+        return "hello";
+    }
+    console.log(fun3());//as fun3 return fun5 defination so output is fun5 defination
+    console.log(fun3()());//hello
+
+</script>
+------------------------------------------------------------------------------------------------------------------------
+-->
+<!--
+
+<script>
+
+    let arr=[];
+
+    function funq(){
+        return "hy";
+    }
+
+     for(i=0;i<5;i++)
+    {
+        arr.push(funq()); //or can write as arr.push(funq) //this will push funq defination
+    }   
+                                           so after } console.log(arr[0]());
+                                                      console .log(arr[1]());so on..
+    for(j=0;j<arr.length;j++)
+    {
+        console.log(arr[j]);
+    }
+    </script>
+    ------------------------------------------------------------------------------------------------------
+-->
+<!--
+<script>
+    function fun1()
+    {
+        return "hy"; //i want this output with 5 sec of delay so use settimeout
+    }
+    
+     //setTimeout has 2 argument function(with fun to be called) and time out
+    setTimeout(function ()
+    {
+        console.log(fun1()); // so after 5 sec it will give 5. hy
+    },5000);
+</script>
+-->
+----------------------------------------------------------------------------------
+<script>
+    for(var i=0;i<5;i++){
+        setTimeout(function()
+            {
+            console.log(i);
+            }
+        ,5000); //after 5sec of delay 5 5 5 5 5 will be displayed on console
+    }         // instead of var use let for output 0 1 2 3 4
+</script>
+
+       

@@ -1,0 +1,31 @@
+<!--
+Default parameters in functions
+--------------------------------
+
+-->
+
+
+<!--
+<script>
+    function funo(arg1="hy",arg2="hy1",agr3="hy2"){
+        console.log(arg1,arg2,arg3);
+
+    };
+    funo();
+    funo("React");
+    funo(undefined,undefined,undefined);
+    funo(null,null,null);
+    funo(undefined,undefined,"hyyyyyy");
+</script>
+-->
+<script>
+    function funtwo(arg1,arg2="hy",...arg3){
+        console.log( arg1,arg2,arg3);
+    }
+
+    funtwo();//undefined hy Array []
+    funtwo(undefined,undefined,undefined); //undefined hy Array [ undefined ]
+    funtwo(null,null,null);
+    funtwo("hyyy",undefined,"helii56");//hyyy hy Array [ "helii56" ]
+    funtwo("one",null,"helii56","ji","let me know");//one null Array(3) [ "helii56", "ji", "let me know" ]
+</script>

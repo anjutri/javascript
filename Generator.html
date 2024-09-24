@@ -1,0 +1,72 @@
+<!--
+GENERATORS
+***********
+generators "controls" the statements in function
+
+generators should have "yeild" statement
+
+generators will return "cursor" mechanism
+
+by using "cursor" we can control statements
+
+-->
+
+<script>
+function *funone(){
+
+    yield "state1";
+    yield "state2";
+    yield "state3";
+    yield "state4";
+    yield "state5";
+}
+
+let cursor = funone(); //cursor at start is before yield statements
+console.log(cursor.next());//Object { value: "state1", done: false } //false means execution has not been completed
+console.log(cursor.next());//Object { value: "state2", done: false }
+console.log(cursor.next());//Object { value: "state3", done: false }
+console.log(cursor.next());//Object { value: "state4", done: false }
+console.log(cursor.next());//Object { value: "state5", done: false }
+console.log(cursor.next());//Object { value: undefined, done: true }// true means execution has been completed
+
+</script>
+
+
+<script>
+    function *funto(){
+
+yield "100";
+yield "200";
+return "300";
+yield "400";
+}
+
+let cur = funto(); //cursor at start is before yield statements
+console.log(cur.next());//Object { value: "100", done: false }
+console.log(cur.next());//Object { value: "200", done: false }
+console.log(cur.next());//Object { value: "300", done: true }
+console.log(cur.next());//Object { value: undefined, done: true } // return statement means end of execution so ,next yield statement wont run 
+
+</script>
+
+<script>
+    function *funthr(){
+        yield "100";
+        yield *funfr();
+        yield *funfi();
+        yield *funsi();
+    }
+    function *funfr(){
+        yield "200";
+    }
+    function *funfi(){
+        yield "300";
+    }
+    function *funsi(){
+        yield "400";
+    }
+    let sor = funthr();
+    for (let i=0 ; i<4;i++){
+        console.log(sor.next());
+    }
+</script>
