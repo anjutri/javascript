@@ -1,0 +1,85 @@
+<!--
+FUNCTION FUN1(ARG1,ARG2){       //ARG1=FUN2 DEF//ARG2=FUN3 DEF
+                                //FUN1(FUN2,FUN3){}
+// ARG1();                      
+
+ //ARG2();
+
+}
+FUNCTION FUN2(){
+
+}
+FUNCTION FUN3(){
+
+
+}
+-->
+
+<script>
+    function funone(arg1){
+        console.log(arg1); //function funtwo()|_>
+        console.log(arg1());//welcome to callback
+
+    }
+    function funtwo(){
+        return "welcome to callback";
+    }
+
+    funone(funtwo); //funone has funtwo defination as an argument
+</script>
+
+
+
+
+<script>
+    function fun1(arg1,arg2,arg3){
+        console.log(arg1(),arg2(),arg3());//hyy byy shy //as arg1=fun1 defination so to execute it we will write arg()
+
+    };
+    fun1(function fun2(){
+        return "hyy";
+    },function fun3(){
+        return "byy";
+    },function fun4(){
+        return "shy";
+    });
+</script>
+
+
+
+
+<script>
+ function fun(arg1){
+        //return arg1();  
+        return arg1();   //as arg1=fu2 so to return the console part of fun2 we write this statement and as fu2 has arg so arg = hyyy
+ }  
+ fun(function fu2(arg1){
+       //console.log(arg1); //undefined
+         console.log(arg1);//hyy
+ });
+</script>
+
+
+
+
+<script>
+    function one(arg1){
+        return arg1(three); //to execute function two containing agrument
+    
+    }
+    function two(arg2){ //arg2 have three definstion
+        return arg2("byyyy"); //to execute three function passing byy as an argument
+    }
+    function three(arg3){
+        console.log(arg3);//last step
+       
+    }
+
+
+    one(two);
+</script>
+
+
+
+
+
