@@ -1,8 +1,8 @@
 //business logic called as function
 //function are used to reuse  the business logic
-//we will define the function with "function keywoed"
+//we will define the function with "function keyword"
 
-//we have follwing types of function:::
+//we have following types of function:::
 //1)Named function
 //2)Anonymous function/arrow function/callback function/fat arrow functions/nameless
 //3)Rest parameters in functions
