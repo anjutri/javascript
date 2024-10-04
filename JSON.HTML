@@ -100,12 +100,12 @@ DATA ------ KEYS AND VALUE PAIRS
     //----hasOwnProperty------
     let obj000 ={
         "key1":"hyyy",
-        "key2": "hyy1";
+        "key2": "hyy1"
     }
 
-    console.log(obj00.hasOwnProperty("key")); //true
-    console.log(obj00.hasOwnProperty("key2")); //true
-    console.log(obj00.hasOwnProperty("key3")); //false // as key3 is not there in obj000
+    console.log(obj000.hasOwnProperty("key1")); //true
+    console.log(obj000.hasOwnProperty("key2")); //true
+    console.log(obj000.hasOwnProperty("key3")); //false // as key3 is not there in obj000
 
 </script>
 
@@ -121,11 +121,11 @@ let obj10 ={
 
     //----check obj is empty or not------
 
-    console.log(Object.keys(obj10));
+    console.log(Object.keys(obj10));//Array [ "key1", "key2" ]
     Object.keys(obj10).length == 0 ? console.log(" empty"): console.log("not empty");//not empty
     
     
-    console.log(Object.values(obj10));
+    console.log(Object.values(obj10));//Array [ "hy", "hy1" ]
     Object.values(obj10).length == 0 ? console.log("empty"): console.log("not empty");//not empty
 
 </script>
@@ -138,7 +138,10 @@ let obj10 ={
         "d":"e"
     }
     let strr = Object.entries(obj22); //converts obj to array
-    console.log(strr);
+    console.log(strr);//0: Array [ "a", "b" ]
+                     //1: Array [ "c", "d" ]
+                    //2: Array [ "d", "e" ]
+                    //length: 3
 
 </script>
 
@@ -155,8 +158,16 @@ let obj10 ={
                  {"price":"300"},
                  {"price":"400"}];//each jason object stored in element
                  console.log(arr.filter((element)=>{return element.price>=300;}))
+</script>
 
 
+<script>
+let keys= "hello";
+let key1="hello2";
+let obj99= {keys,
+            key1
+}
+console.log(obj99);//Object { keys: "hello", key1: "hello2" }
 </script>
 
 
