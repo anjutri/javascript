@@ -1,0 +1,165 @@
+<!--
+JSON
+*****
+
+-JSON stands for javascript object notation
+
+-JSON Also called as java script objects
+
+-we can exchange the data in fullstack application in two ways
+1) XML     ---- it is heavy weight.
+
+2) JSON    ---- it is light weight.
+
+-JSON data suggested while transferring the data
+
+
+SYNTAX:
+*******
+OBJECTS ------ {}
+ARRAYS ------ []
+DATA ------ KEYS AND VALUE PAIRS
+            KEYS AND VALUE PAIRS SEPARATED BY ":"
+
+-->
+
+
+
+<script>
+    //object creation
+    let obj = {
+        //"keys": "values";
+        "subone": "reactjs",
+        "sub2": "nodejs",
+        "sub3": "mongo"
+    };
+
+    console.log(obj.subone);//to access values
+    </script>
+
+
+
+
+    <script>
+       let obj1 = {
+        "obj2": { "keys": "values"} , //key is obj1 value is another json object
+        "obj3":{ "key3":"value5"}
+       };
+       console.log(obj1.obj2.keys);//values
+       console.log(obj1.obj3.key3);//value5
+       </script>
+
+
+
+
+
+
+
+
+
+
+<!--
+******************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+-->
+
+
+
+
+<script>
+    // JASON 3RD
+    let obj2 = {"keys":"hello"};
+    console.log(typeof obj2);  //object
+
+    //----to convert to string----
+    let str= JSON.stringify(obj);
+    console.log(typeof str); //string
+</script>
+
+
+
+<!--
+1. JSON.strinify()  -----   converts object to stringify
+2. JSON.parse()     -----   converts string to object
+-->
+
+<script>
+    //------object to string------
+    let obj0 = {"key0":"hyyyy"};
+    console.log(typeof obj0);//object
+
+    let str0 = JSON.stringify(obj0);
+    console.log(typeof str);//string
+
+    //-------string to object --------
+    let obj00=JSON.parse(str0);
+    console.log(typeof obj00);//object
+</script>
+
+<script>
+    //----hasOwnProperty------
+    let obj000 ={
+        "key1":"hyyy",
+        "key2": "hyy1";
+    }
+
+    console.log(obj00.hasOwnProperty("key")); //true
+    console.log(obj00.hasOwnProperty("key2")); //true
+    console.log(obj00.hasOwnProperty("key3")); //false // as key3 is not there in obj000
+
+</script>
+
+
+<script>
+    //Object.keys(object name) ----- to show object's keys only as array  
+     
+let obj10 ={
+        "key1":"hy",
+        "key2": "hy1"
+    }
+
+
+    //----check obj is empty or not------
+
+    console.log(Object.keys(obj10));
+    Object.keys(obj10).length == 0 ? console.log(" empty"): console.log("not empty");//not empty
+    
+    
+    console.log(Object.values(obj10));
+    Object.values(obj10).length == 0 ? console.log("empty"): console.log("not empty");//not empty
+
+</script>
+
+<script>
+    // ----object to array-----
+    let obj22={
+        "a":"b",
+        "c":"d",
+        "d":"e"
+    }
+    let strr = Object.entries(obj22); //converts obj to array
+    console.log(strr);
+
+</script>
+
+
+<script>
+    let obj33 = {"key": "value"};
+    let obj44 = {"key1": "value1"};
+    let obj55 = {"key2": "value2"};
+</script>
+
+<script>
+    let obj23 = [{"price":"100"},
+                 {"price":"200"},
+                 {"price":"300"},
+                 {"price":"400"}];//each jason object stored in element
+                 console.log(arr.filter((element)=>{return element.price>=300;}))
+
+
+</script>
+
+
+
+
+
